@@ -18,7 +18,7 @@ Archive.org, WikiData, Wikipedia, and IMDB.
 
 The database is located here: 
 
-    /src/public/database/movies.json
+    /public/database/movies.json
 
 ## Some Features
 - Offline search engine (thanks to [flexsearch](https://github.com/nextapps-de/flexsearch) )
