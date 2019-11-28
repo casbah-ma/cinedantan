@@ -10,7 +10,7 @@ Cinedantan is a friendly and searchable library of public domain movies.
 
 ![](https://cdn.cinedantan.com/github/you-might-like.png)
 
-It's a small React.js Progressive Web Apps. 
+It's a small React.js Progressive Web App. 
 
 The movies database is a simple JSON file streamed into the redux store using 
 the excellent [Oboe.js](http://oboejs.com/) and built from different sources including 
