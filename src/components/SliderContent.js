@@ -38,7 +38,7 @@ export default function SliderContent({data, isDetail}) {
        
         
             
-        <div style={{ height: isDetail ? '70vh' : '50vh', width:'auto' }}>
+        <div style={{ height: isDetail ? '70vh' : '50vh', width:'auto', textAlign:'center' }}>
         <Link to={hrefLink} >
                 <Img
                     src={idToPoster(identifier, true)}
