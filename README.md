@@ -12,20 +12,20 @@ Cinedantan is a friendly and searchable library of public domain movies.
 
 It's a small React.js Progressive Web App. 
 
-The movies database is a simple JSON file streamed into the redux store using 
-the excellent [Oboe.js](http://oboejs.com/) and built from different sources including 
+The movies dataset is a simple JSON file streamed into the redux store using 
+the excellent [Oboe.js](http://oboejs.com/). It was created by combining multiple sources:
 Archive.org, WikiData, Wikipedia, and IMDB.
 
-The database is located here: 
+The dataset is located here: 
 
     /public/database/movies.json
 
 ## Some Features
 - Offline search engine (thanks to [flexsearch](https://github.com/nextapps-de/flexsearch) )
-- Add, remove or share your lists (serverless and using only the local storage and magic links)
+- Create and share your lists (This is done with no remote database or server)
 - Continue Watching
-- Recommendations
+- Personalized recommendations
 - ChromeCast support
 - ...
 
-This App was built in less than 48h. You may find some ugliness there...I will do some refactoring and add tests as soon as I can.
+This App was built in less than 48h. I will do some refactoring and add tests very soon.
