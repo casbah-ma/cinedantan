@@ -58,25 +58,13 @@ function MenuContainer ({favorites, isPlaying}) {
 
         {
           !isPlaying ? <Menu.Item key="code">
-          <a href="https://github.com/cinedantan/webapp" target="_Blank" rel="noopener noreferrer">
+          <a href="https://github.com/cinedantan" target="_Blank" rel="noopener noreferrer">
           <Icon type="github"/>
           Github
           </a>
           </Menu.Item> : null
         }
 
-        {
-          !isPlaying ? <Menu.Item key="contact">
-          <a href="mailto:hi@cinedantan.com">
-          <Icon type="mail"/>
-          hi@cinedantan.com
-        </a>
-          </Menu.Item> : null
-        }
-      
-      
-        
-        
         {
           !isMobile && !isPlaying?   <Menu.Item key="search" style={{float:'right', padding:'5px'}}>
           <Link to="/collection">
