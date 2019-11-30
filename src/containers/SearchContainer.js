@@ -71,7 +71,7 @@ function App({ movies, searchQ, route }) {
     <div style={{ width: '100%', minHeight: '150vh' }}>
       <SeoComponent
         title={'Collection [ ' + (searchQuery+' ]' || ']')}
-        description={results.map((r) => r.title + ' by ' + r.director) + '...'}
+        description={(results && results[0]) && (results.map((r) => r.title + ' by ' + r.director) + '...')}
         image={(results && results[0]) ? idToPoster(results[0].identifier) : null}
       
       />
