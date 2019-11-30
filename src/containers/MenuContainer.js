@@ -66,6 +66,15 @@ function MenuContainer ({favorites, isPlaying}) {
         }
 
         {
+          !isPlaying ? <Menu.Item key="fb">
+          <a href="https://www.facebook.com/cinedantan/" target="_Blank" rel="noopener noreferrer">
+          <Icon type="facebook" theme="filled" />
+          @cinedantan
+          </a>
+          </Menu.Item> : null
+        }
+
+        {
           !isMobile && !isPlaying?   <Menu.Item key="search" style={{float:'right', padding:'5px'}}>
           <Link to="/collection">
       
