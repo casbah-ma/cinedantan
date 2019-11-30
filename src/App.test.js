@@ -7,3 +7,7 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+
+// This fail because of Lottie Canvas
+// Tried jest-canvas-mock with no luck

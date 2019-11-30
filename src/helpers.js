@@ -26,18 +26,6 @@ export function sortByKey(array, keyOne, keyTwo = '') {
         return ((x*z > y*f) ? -1 : ((x*z < y*f) ? 1 : 0));
     });
   }
-  
-export function addOrRemoveFromArray(array, value) {
-    if(!array) return [value]
-      
-    var index = array.indexOf(value);
-
-    if (index === -1) {
-        array.push(value);
-    } else {
-        array.splice(index, 1);
-    }
-}
 
 export function imdbToMovie(imdb, movieArray) {
     if (!movieArray) return
