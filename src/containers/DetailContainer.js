@@ -100,7 +100,17 @@ function FavoritesContainer({ movies, route }) {
                           <Rate character={<Icon type="heart" />} disabled defaultValue={Math.abs(rating / 2)} />
                         </div>
                       </h1>
+                  </div>
+                  
+                  {
+                    isMobile && <div>
+                      <Spacer bottom={'5vh'}/>
+                      <Link to={title ? '/watch/' + window.btoa(imdb) : null}>
+                      <Button type="primary" block icon="caret-right" size={'large'}>Play</Button>
+                      </Link>
+                      <Spacer bottom={'5vh'}/>
                     </div>
+                  }
                     
             
                     <div style={{display:'flex'}}>
@@ -142,12 +152,14 @@ function FavoritesContainer({ movies, route }) {
                  
                  
                  
+                {
+                  isMobile ? <Spacer bottom={'25vh'} /> : <Spacer bottom={'10vh'} />
+                }  
                         
                 </Col>
 
               
-                
-            <Spacer bottom={'10vh'} />
+            
            
          
         
