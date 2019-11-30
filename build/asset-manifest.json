@@ -4,7 +4,7 @@
     "static/js/1.e6974c1f.chunk.js": "/static/js/1.e6974c1f.chunk.js",
     "static/js/2.67e19b20.chunk.js": "/static/js/2.67e19b20.chunk.js",
     "main.css": "/static/css/main.8650c96e.chunk.css",
-    "main.js": "/static/js/main.bee80cdc.chunk.js",
+    "main.js": "/static/js/main.13fc6686.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.10aa9269.js",
     "static/css/5.05f9a055.chunk.css": "/static/css/5.05f9a055.chunk.css",
     "static/js/5.e013f590.chunk.js": "/static/js/5.e013f590.chunk.js",
@@ -17,7 +17,7 @@
     "static/js/12.83dca5a1.chunk.js": "/static/js/12.83dca5a1.chunk.js",
     "static/js/13.0849cac0.chunk.js": "/static/js/13.0849cac0.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.aa41d13bb59f783aa181327e84da66cf.js": "/precache-manifest.aa41d13bb59f783aa181327e84da66cf.js",
+    "precache-manifest.2bece2eb82020b2a43d634f0a3745f9d.js": "/precache-manifest.2bece2eb82020b2a43d634f0a3745f9d.js",
     "service-worker.js": "/service-worker.js",
     "static/media/App.css": "/static/media/limelight-latin.3e31e2a2.woff2",
     "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg"
@@ -27,6 +27,6 @@
     "static/css/5.05f9a055.chunk.css",
     "static/js/5.e013f590.chunk.js",
     "static/css/main.8650c96e.chunk.css",
-    "static/js/main.bee80cdc.chunk.js"
+    "static/js/main.13fc6686.chunk.js"
   ]
 }
