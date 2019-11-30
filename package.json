@@ -1,10 +1,10 @@
 {
-  "name": "cinedanton.com",
+  "name": "cinedantan.com",
   "version": "1.0.15",
   "author": {
     "name": "El Abbassi Youssef",
     "email": "youssef@cinedantan.com",
-    "url": "https://cinedanton.com"
+    "url": "https://cinedantan.com"
   },
   "license": "MIT",
   "dependencies": {
