@@ -1,4 +1,4 @@
-import obeo from 'oboe'
+import oboe from 'oboe'
 import {MOVIES_JSON_URL} from '../constants'
 
 import {
@@ -59,7 +59,7 @@ export const setMoviesDb = (movies) => {
 }
 
 const fetchMoviesStream = () => {
-    return obeo(MOVIES_JSON_URL)
+    return oboe(MOVIES_JSON_URL)
 }
 
 export const setMoviesFromBigJson = () => {
