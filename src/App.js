@@ -21,7 +21,7 @@ function App({setMoviesFromBigJson, movies}) {
       <div className={'App-body'}>
         <MenuContainer/>
         {
-          (movies && movies.length > 10) ? <RoutesContainer /> :
+          (movies && Array.isArray(movies)) ? <RoutesContainer /> :
             <Suspense
               fallback={<LoadingFallback />}>
               <AnimFilm />
