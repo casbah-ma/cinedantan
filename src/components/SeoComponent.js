@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 export default function SeoComponent({
-    title = "🎥 🍿 CineDanton - Watch +2100 Free Public Domain Movies",
+    title = "🎥 🍿 CineDantan - Watch +2100 Free Public Domain Movies",
     description ="Watch A Curated list of +2100 Public Domain Movies Online",
     image = "https://cinedantan.com/logo512.png",
 }) {

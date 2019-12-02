@@ -32,7 +32,7 @@ function FavoritesContainer({ movies, route, favorites }) {
   return (
     <div style={{ width: '100%', minHeight: '130vh' }}>
       <SeoComponent
-        title={"🎥 🍿 CineDanton - Favorites"}
+        title={"🎥 🍿 CineDantan - Favorites"}
       />
       <Spacer top={'10vh'} />
      
