@@ -16,7 +16,7 @@ import {
     TwitterShareButton
   } from 'react-share';
   
-export default function Share({ url = "window.location.href", title }) {
+export default function Share({ url = window.location.href, title }) {
     return (
         <div style={{ textAlign: 'center' }}>
             {
@@ -27,7 +27,7 @@ export default function Share({ url = "window.location.href", title }) {
                 style={{
                     display: 'flex',
                     justifyContent: 'center',
-                    cursor: 'alias',
+                    cursor: 'pointer',
                 }}
             >
                 <EmailShareButton url={url}>

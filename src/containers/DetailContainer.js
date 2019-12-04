@@ -8,6 +8,7 @@ import SeoComponent from '../components/SeoComponent'
 import { idToPoster, isMobile, imdbToMovie } from '../helpers'
 import { Row, Col, Icon, Button, Rate, Tag } from 'antd'
 import ReadMoreReact from 'read-more-react';
+import Share from '../components/Share'
 
 
 function FavoritesContainer({ movies, route }) {
@@ -280,6 +281,8 @@ function FavoritesContainer({ movies, route }) {
                                       Play
                                   </Button>
                               </Link>
+                              <Spacer top={'30px'}/>
+                              <Share />
 
                               {isMobile ? (
                                   <Spacer bottom={'25vh'} />
