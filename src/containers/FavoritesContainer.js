@@ -30,30 +30,25 @@ function FavoritesContainer({ movies, route, favorites }) {
   
 
   return (
-    <div style={{ width: '100%', minHeight: '130vh' }}>
-      <SeoComponent
-        title={"🎥 🍿 CineDantan - Favorites"}
-      />
-      <Spacer top={'10vh'} />
-     
-      {(!favoritesMovies || !urlQuery) ?
-        <div style={{textAlign:'center'}}>
-          <AnimFilm />
-          <p>To display your favorites here, Press on the little hearts (bottom right of posters) </p>
-          </div> :
-        <div>
-          <Slider posters={favoritesMovies} title={''} />
-          <Share url={window.location.href} />
-        </div>
-      }
-      
-    </div>
+      <div style={{ width: '100%', minHeight: '130vh' }}>
+          <SeoComponent title={'🎥 🍿 CineDantan - Favorites'} />
+          <Spacer top={'10vh'} />
 
-
-
-    
-      
-    
+          {!favoritesMovies || !urlQuery ? (
+              <div style={{ textAlign: 'center' }}>
+                  <AnimFilm />
+                  <p>
+                      To display your favorites here, Press on the little hearts
+                      (bottom right of posters){' '}
+                  </p>
+              </div>
+          ) : (
+              <div>
+                  <Slider posters={favoritesMovies} title={''} />
+                  <Share url={window.location.href} />
+              </div>
+          )}
+      </div>
   )
 }
 

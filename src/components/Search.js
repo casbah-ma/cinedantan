@@ -9,15 +9,16 @@ const { Search } = Input
 
 function SearchComponent({setSearch}) {
   
-  return <Search
-    placeholder="Title, director, cast, year..."
-    style={{ width: isMobile ? '100%' : '20vw', paddingRight:'10px', }}
-        onSearch={value => {
-        setSearch(value)
-        history.push('/collection/' + value)
-      }}
-     
-    />
+  return (
+      <Search
+          placeholder="Title, director, cast, year..."
+          style={{ width: isMobile ? '100%' : '20vw', paddingRight: '10px' }}
+          onSearch={value => {
+              setSearch(value)
+              history.push('/collection/' + value)
+          }}
+      />
+  )
     
 }
 

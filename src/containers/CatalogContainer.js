@@ -13,8 +13,8 @@ function App({ movies, moviesCats, viewingHistory, favorites }) {
   //eslint-disable-next-line array-callback-return
   const continueWatchingIds = viewingHistory.map(v => {
     if (v.played <= 0.97) {
-      return v.imdb
-    }
+                              return v.imdb
+                          }
   })
 
   const isThereAnyContinueWatching = continueWatchingIds && Array.isArray(continueWatchingIds) && continueWatchingIds[0]

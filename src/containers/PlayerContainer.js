@@ -31,17 +31,14 @@ function VideoPlayerComponent({ setIsPlaying, movies, route }) {
   const {title, story } = currentMovie
   
   return (
-    <div>
-    <SeoComponent
-      title={'🎥 🍿 Playing ' +title }
-      description={story ? story.slice(0,100)+'...' : ''}
-      image={idToPoster(identifier)}
-    />
-      {
-        videos ? <VideoPlayer videos={videos} {...currentMovie} /> : null
-      }
-     
-    </div>
+      <div>
+          <SeoComponent
+              title={'🎥 🍿 Playing ' + title}
+              description={story ? story.slice(0, 100) + '...' : ''}
+              image={idToPoster(identifier)}
+          />
+          {videos ? <VideoPlayer videos={videos} {...currentMovie} /> : null}
+      </div>
   )
 }
 

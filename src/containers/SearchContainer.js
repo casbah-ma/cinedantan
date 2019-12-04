@@ -68,55 +68,53 @@ function App({ movies, searchQ, route }) {
   
 
   return (
-    <div style={{ width: '100%', minHeight: '150vh' }}>
-      <SeoComponent
-        title={'Collection [ ' + (searchQuery+' ]' || ']')}
-        description={(results && results[0]) && (results.map((r) => r.title + ' by ' + r.director) + '...')}
-        image={(results && results[0]) ? idToPoster(results[0].identifier) : null}
-      
-      />
-    <div className={'page-border-top'} />
-    <Spacer top={'7vh'}/>
-     
+      <div style={{ width: '100%', minHeight: '150vh' }}>
+          <SeoComponent
+              title={'Collection [ ' + (searchQuery + ' ]' || ']')}
+              description={
+                  results &&
+                  results[0] &&
+                  results.map(r => r.title + ' by ' + r.director) + '...'
+              }
+              image={
+                  results && results[0]
+                      ? idToPoster(results[0].identifier)
+                      : null
+              }
+          />
+          <div className={'page-border-top'} />
+          <Spacer top={'7vh'} />
 
-      {isMobile ?
-        
-        <div style={{
-          padding: '50px',
-          position: 'fixed',
-          bottom: 0, backgroundColor:
-            '#141312', width: '100%', zIndex: 99999999999,
-          borderTop:'1px solid white'
-        }}>
-          <SearchBox />
-        </div>
-        : null
-      }
+          {isMobile ? (
+              <div
+                  style={{
+                      padding: '50px',
+                      position: 'fixed',
+                      bottom: 0,
+                      backgroundColor: '#141312',
+                      width: '100%',
+                      zIndex: 99999999999,
+                      borderTop: '1px solid white',
+                  }}
+              >
+                  <SearchBox />
+              </div>
+          ) : null}
 
-      {!searchQuery ? <AnimSearch /> : <div>
+          {!searchQuery ? (
+              <AnimSearch />
+          ) : (
+              <div>
+                  <Slider posters={results} title={searchQuery} isSearch />
+                  {results && results.length === 0 ? <AnimSearch /> : null}
 
-       
-     
-        <Slider posters={results} title={searchQuery} isSearch />
-        {results && results.length === 0 ? <AnimSearch /> : null}
-
-        <Share url={window.location.href} title={'Share your Findings'} />
-        
-      </div>}
-      
-        
-      
-
-      
-        
-      
-    </div>
-
-
-
-    
-      
-    
+                  <Share
+                      url={window.location.href}
+                      title={'Share your Findings'}
+                  />
+              </div>
+          )}
+      </div>
   )
 }
 
@@ -125,7 +123,7 @@ const mapStateToProps = state => ({
 })
  
 const mapDispatchToProps = dispatch => ({
-  //addFile: file => dispatch(addFile(file))
+  
  })
 
  export default connect(mapStateToProps, mapDispatchToProps)(App);

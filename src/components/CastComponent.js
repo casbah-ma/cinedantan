@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { connect } from 'react-redux';
 import castImage from '../images/cast.png'
 import cast from '../cast'
@@ -11,10 +11,6 @@ let device = new cast();
 function CastComponent({ isPlaying, viewingHistory }) {
 
     const isThisMoviePlayed = isPlaying ? viewingHistory.filter(v => v.imdb === isPlaying.imdb)[0] : null
-
-    useEffect(() => {
-        
-    })
    
     return (<div>
     {   (isPlaying && device && device.available) ?
@@ -29,13 +25,7 @@ function CastComponent({ isPlaying, viewingHistory }) {
                             time:   isThisMoviePlayed ? isThisMoviePlayed.playedSeconds : 0
                           }
             
-                        device.cast(isPlaying.videos[0], metaData);
-                          
-                        /*
-                        if (device.receiver) {
-                            history.push('/')
-                        }
-                        */
+                        device.cast(isPlaying.videos[0], metaData)
           } 
         }} />
         
