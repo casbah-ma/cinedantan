@@ -29,7 +29,7 @@ function App({ movies, moviesCats, viewingHistory, favorites }) {
   const favToSuggestions = imdbToMovie(mergedFavoritesRelatedExcludeFav, movies)
   
   return (
-    <div className={'catalog-screen'} style={{ maxWidth: '100%' }}>
+    <div className={'catalog-screen'} style={{ width: '100%' }}>
       <SeoComponent/>
       <div className={'page-border-top'} />
       

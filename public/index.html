@@ -10,17 +10,85 @@
       content="Watch Public Domain Movies and TV Shows Online"
     />
     <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <style>
+      .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #F9EB29;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  background: #EF4023;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  background: #F9EB29;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  background: #EF4023;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  background: #F9EB29;
+  animation: lds-ellipsis3 0.6s infinite;
+  
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+      
+      </style>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
    
   <title>🎥 🍿 CineDantan.com - Watch +2000 Free Public Domain Movies</title>
   </head>
   <body style="background-color:rgb(19, 18, 17)">
     <noscript>Please enable Javascript</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div style="text-align: center; padding-top: 45vh; display: block">
+        <img src="%PUBLIC_URL%/logo192.png" alt="loading-logo"/>
+        <br/>
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      </div>
+    </div>
+         
     <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
   </body>
 </html>
+
