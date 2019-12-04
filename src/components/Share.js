@@ -16,12 +16,13 @@ import {
     TwitterShareButton
   } from 'react-share';
   
-export default function Share({ url, title }) {
+export default function Share({ url = "window.location.href", title }) {
     return (
         <div style={{ textAlign: 'center' }}>
-            <h2 style={{ color: 'rgb(37,38,38)' }}>
-                {title || 'Share your Selection'}
-            </h2>
+            {
+                title &&  <h2 style={{ color: 'rgb(37,38,38)' }}>{title}</h2>
+            }
+           
             <div
                 style={{
                     display: 'flex',

@@ -10,7 +10,7 @@ function VideoPlayerComponent({ setIsPlaying, movies, route }) {
   const [videos, setVideos] = useState([])
   
   // Get id from Url
-  const { match } = route
+  const match = route ? route.match : null
   const urlQuery = (match && match.params) ? window.atob(match.params.id) : null
 
   // Get current movie
@@ -28,7 +28,8 @@ function VideoPlayerComponent({ setIsPlaying, movies, route }) {
     }
   
   }, [aoFiles, currentMovie, setIsPlaying, identifier])
-  const {title, story } = currentMovie
+
+  const {title, story } = currentMovie || {title:null, story:null}
   
   return (
       <div>

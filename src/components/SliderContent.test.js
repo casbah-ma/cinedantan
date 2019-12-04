@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import SliderContent from './SliderContent';
+import movies from '../../public/database/movies'
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<SliderContent data={movies}/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
-
-// This fail because of Lottie Canvas
-// Tried jest-canvas-mock with no luck
