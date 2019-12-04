@@ -28,4 +28,4 @@ The dataset is located here:
 - ChromeCast support
 - ...
 
-This App was built in less than 48h. I will do some refactoring and add tests very soon.
+~~This App was built in less than 48h. I will do some refactoring and add tests very soon.~~
