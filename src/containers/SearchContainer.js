@@ -8,18 +8,15 @@ import SeoComponent from '../components/SeoComponent'
 import { isMobile, imdbToMovie, idToPoster } from '../helpers'
 import Share from '../components/Share'
 import FlexSearch from 'flexsearch/dist/flexsearch.min'
-//import index from '../database/searchEngine'
-
 
 var index = new FlexSearch({
   profile:"fast",
   depth: 5,
-  async: true
+  async: true,
+  cache: true
 });
 
 let isFired = false
-
-
 
 function App({ movies, searchQ, route }) {
   const { match } = route
@@ -39,7 +36,6 @@ function App({ movies, searchQ, route }) {
       }
     }
     
-
   },[movies])
 
  
@@ -70,11 +66,11 @@ function App({ movies, searchQ, route }) {
   return (
       <div style={{ width: '100%', minHeight: '150vh' }}>
           <SeoComponent
-              title={'Collection [ ' + (urlQuery + ' ]' || ']')}
+              title={urlQuery && ('🔎 ' + urlQuery)}
               description={
                   results &&
                   results[0] &&
-                  results.map(r => r.title + ' by ' + r.director) + '...'
+                  results.map(r => ' '+r.title) + '...'
               }
               image={
                   results && results[0]
@@ -105,7 +101,7 @@ function App({ movies, searchQ, route }) {
               <AnimSearch />
           ) : (
               <div>
-                  <Slider posters={results} title={searchQuery} isSearch />
+                  <Slider posters={results} title={'🔎 '+searchQuery } isSearch />
                   {results && results.length === 0 ? <AnimSearch /> : null}
 
                   <Share
