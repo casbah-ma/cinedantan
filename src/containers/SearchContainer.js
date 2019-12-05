@@ -70,7 +70,7 @@ function App({ movies, searchQ, route }) {
   return (
       <div style={{ width: '100%', minHeight: '150vh' }}>
           <SeoComponent
-              title={'Collection [ ' + (searchQuery + ' ]' || ']')}
+              title={'Collection [ ' + (urlQuery + ' ]' || ']')}
               description={
                   results &&
                   results[0] &&
