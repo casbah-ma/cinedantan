@@ -14,7 +14,7 @@ const Loader = ({ identifier, isDetail }) => {
       className={"slider-content-img"}
       style={{
         height: isDetail ? "auto" : "45vh",
-        objectFit: isDetail ? "" : "contain",
+        objectFit: isDetail ? "" : "unset",
         filter: "blur(2px)"
       }}
     />
@@ -31,7 +31,6 @@ export default function SliderContent({ data, isDetail }) {
 
   return (
     <LazyLoad>
-      {" "}
       <div className={"dvd-box"}>
         <div
           style={{
@@ -48,8 +47,8 @@ export default function SliderContent({ data, isDetail }) {
               decode={false}
               className={"slider-content-img"}
               style={{
-                height: isDetail ? "auto" : "45vh",
-                objectFit: isDetail ? "" : "contain"
+                height: isDetail ? "auto" : "50vh",
+                objectFit: isDetail ? "" : "unset"
               }}
             />
             {isDetail && (
@@ -76,10 +75,13 @@ export default function SliderContent({ data, isDetail }) {
             <AddToFavorites imdb={imdb} />
            
           </div>
-        
-          <p style={{textAlign:"center", fontSize:'15px', color:'rgba(255,255,255,0.5)', fontWeight:'300', marginTop:'50px'}}>
-          {title}
-          </p>
+          {
+            !isDetail &&
+            <p style={{ textAlign: "center", fontSize: '15px', color: 'rgba(255,255,255,0.5)', fontWeight: '300', marginTop: '50px' }}>
+              {title}
+            </p>
+        }
+         
         </div>
       </div>
     </LazyLoad>

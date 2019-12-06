@@ -81,7 +81,7 @@ function SliderComponent({ posters, title }) {
                         className={'glitch'}
                         style={{
                             fontSize: '3.5vh',
-                            lineHeight: '5.5vw',
+                            lineHeight: '4vw',
                             color: 'white',
                         }}
                     >
