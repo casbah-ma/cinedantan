@@ -22,7 +22,7 @@ const Loader = ({ identifier, isDetail }) => {
 };
 
 export default function SliderContent({ data, isDetail }) {
-  const { identifier, imdb, rating, title, runtime } = data;
+  const { identifier, imdb, rating, title ='', runtime } = data;
   const hrefLink = isDetail
     ? "/watch/" + window.btoa(imdb)
     : imdb
