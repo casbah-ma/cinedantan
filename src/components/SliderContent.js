@@ -27,7 +27,7 @@ export default function SliderContent({ data, isDetail }) {
     ? "/watch/" + window.btoa(imdb)
     : imdb
     ? "/details/" + window.btoa(imdb)
-    : "#";
+      : "#";
 
   return (
     <LazyLoad>
@@ -77,9 +77,12 @@ export default function SliderContent({ data, isDetail }) {
           </div>
           {
             !isDetail &&
-            <p style={{ textAlign: "center", fontSize: '15px', color: 'rgba(255,255,255,0.5)', fontWeight: '300', marginTop: '50px' }}>
+            <div style={{position:'absolute', bottom:'5vh', margin:'0 auto', textAlign: "center",width:'100%'}}>
+            <p style={{  fontSize: '15px', color: 'rgba(255,255,255,0.5)', fontWeight: '300', marginTop: '50px' }}>
               {title}
             </p>
+            </div>
+           
         }
          
         </div>
