@@ -29,7 +29,7 @@ function App({ movies, searchQ, route }) {
     if (!isFired) {
       for (let i = 0; i < movies.length; i++){
         const { title, imdb, year, director, writers, stars, genre, story } = movies[i]
-        index.add(imdb, JSON.stringify({ imdb, title, year, director, writers, stars, genre, story }))
+        index.add(imdb, JSON.stringify({ imdb, title, year, director, writers, stars, genre, story: story ? story.slice(0,100) : null}))
         if (i === movies.length - 1) {
           isFired = true
         }
