@@ -209,6 +209,17 @@ p{
   right:5%;
   padding:5px;
 }
+
+.poster-title{
+  position:absolute; 
+  text-align: left;
+  bottom: 4.5vh;
+  left: 10%; 
+  margin:0 auto; 
+  width:100%;
+  font-family: var(--font-sans);
+}
+
 .read-more-button{
   font-weight: 900;
   

@@ -22,7 +22,7 @@ const Loader = ({ identifier, isDetail }) => {
 };
 
 export default function SliderContent({ data, isDetail }) {
-  const { identifier, imdb, rating, title } = data;
+  const { identifier, imdb, rating, title, runtime } = data;
   const hrefLink = isDetail
     ? "/watch/" + window.btoa(imdb)
     : imdb
@@ -77,9 +77,9 @@ export default function SliderContent({ data, isDetail }) {
           </div>
           {
             !isDetail &&
-            <div style={{position:'absolute', bottom:'5vh', margin:'0 auto', textAlign: "center",width:'100%'}}>
-            <p style={{  fontSize: '15px', color: 'rgba(255,255,255,0.5)', fontWeight: '300', marginTop: '50px' }}>
-              {title}
+            <div className={'poster-title'}>
+            <p style={{  fontSize: '17px', color: 'rgba(255,255,255,0.6)', fontWeight: '300', fontFamily:'inherit' }}>
+                <strong>{title.slice(0, 35)}{title.length>35 && '...'}</strong> <br/><Icon type="clock-circle" theme="filled" /> {runtime}
             </p>
             </div>
            
