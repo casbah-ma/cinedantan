@@ -22,6 +22,7 @@ export default function RouteContainer() {
         },
         {
             ignoreLocalhost: true,
+            detailed: true
         }
     )
 

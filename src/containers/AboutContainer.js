@@ -27,7 +27,7 @@ export default function MenuContainer () {
           </p>
         
           <p>
-          Please consider supporting Archive.org as they host all the videos.
+          Please consider supporting <a href="https://archive.org" target="_Blank" rel="no-follow nofollow noopener noreferrer">Archive.org</a> as they host all the videos.
           </p>
         </div>
         
@@ -35,8 +35,7 @@ export default function MenuContainer () {
         <h3 style={{color:'white'}}>Privacy</h3>
         <div>
           <p>
-          CineDantan.com respect their user’s privacy. It collects the bare minimum stats: the most visited pages, top referrers and how many users. For doing that,
-              it uses a self-hosted open-source tool: <a href="https://github.com/electerious/Ackee" target="_Blank" rel="no-follow nofollow noopener noreferrer">Ackee</a>
+          CineDantan.com respect their user’s privacy. It collects the bare minimum stats and uses a <a href="https://github.com/electerious/Ackee" target="_Blank" rel="no-follow nofollow noopener noreferrer">self-hosted open-source tool: Ackee</a>
           </p>
         
         </div>
