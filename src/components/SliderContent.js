@@ -40,9 +40,7 @@ export default function SliderContent({ data, isDetail }) {
             textAlign: "center"
           }}
         >
-        <p style={{textAlign:"center", fontSize:'15px', color:'rgba(255,255,255,0.3)', fontWeight:'300'}}>
-        {title}
-        </p>
+       
           <Link to={hrefLink}>
             <Img
               src={idToPoster(identifier, true)}
@@ -79,7 +77,9 @@ export default function SliderContent({ data, isDetail }) {
            
           </div>
         
-          
+          <p style={{textAlign:"center", fontSize:'15px', color:'rgba(255,255,255,0.5)', fontWeight:'300', marginTop:'50px'}}>
+          {title}
+          </p>
         </div>
       </div>
     </LazyLoad>
