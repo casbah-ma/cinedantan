@@ -22,7 +22,7 @@ const Loader = ({ identifier, isDetail }) => {
 };
 
 export default function SliderContent({ data, isDetail }) {
-  const { identifier, imdb, rating } = data;
+  const { identifier, imdb, rating, title } = data;
   const hrefLink = isDetail
     ? "/watch/" + window.btoa(imdb)
     : imdb
@@ -35,11 +35,14 @@ export default function SliderContent({ data, isDetail }) {
       <div className={"dvd-box"}>
         <div
           style={{
-            height: isDetail ? "70vh" : "50vh",
+            height: "65vh",
             width: "auto",
             textAlign: "center"
           }}
         >
+        <p style={{textAlign:"center", fontSize:'15px', color:'rgba(255,255,255,0.3)', fontWeight:'300'}}>
+        {title}
+        </p>
           <Link to={hrefLink}>
             <Img
               src={idToPoster(identifier, true)}
@@ -67,13 +70,18 @@ export default function SliderContent({ data, isDetail }) {
                 disabled
                 defaultValue={Math.abs(rating / 2)}
               />
+             
             </div>
           </Link>
+          
           <div className={"fav-container"}>
             <AddToFavorites imdb={imdb} />
+           
           </div>
+        
+          
         </div>
-      </div>{" "}
+      </div>
     </LazyLoad>
   );
 }
