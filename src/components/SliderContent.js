@@ -78,7 +78,7 @@ export default function SliderContent({ data, isDetail }) {
           {
             !isDetail &&
             <div className={'poster-title'}>
-            <p style={{  fontSize: '17px', color: 'rgba(255,255,255,0.6)', fontWeight: '300', fontFamily:'inherit' }}>
+            <p style={{  fontSize: '13px', color: 'rgba(255,255,255,0.6)', fontWeight: '300', fontFamily:'inherit' }}>
                 <strong>{title.slice(0, 35)}{title.length>35 && '...'}</strong> <br/><Icon type="clock-circle" theme="filled" /> {runtime}
             </p>
             </div>

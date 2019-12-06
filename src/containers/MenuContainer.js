@@ -62,14 +62,7 @@ function MenuContainer ({favorites, isPlaying}) {
                 </Menu.Item>
             ) : null}
 
-            {!isPlaying ? (
-                <Menu.Item key="about">
-                    <Link to="/about">
-                        <Icon type="info-circle" />
-                        About
-                    </Link>
-                </Menu.Item>
-            ) : null}
+          
 
             {!isPlaying ? (
                 <Menu.Item key="code">
@@ -85,15 +78,11 @@ function MenuContainer ({favorites, isPlaying}) {
             ) : null}
 
             {!isPlaying ? (
-                <Menu.Item key="fb">
-                    <a
-                        href="https://www.facebook.com/cinedantan/"
-                        target="_Blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Icon type="facebook" theme="filled" />
-                        @cinedantan
-                    </a>
+                <Menu.Item key="about">
+                    <Link to="/about">
+                        <Icon type="info-circle" />
+                        {isMobile && 'About'}
+                    </Link>
                 </Menu.Item>
             ) : null}
 
