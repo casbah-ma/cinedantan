@@ -64,7 +64,7 @@ function App({ movies, searchQ, route }) {
   
 
   return (
-      <div style={{ width: '100%', minHeight: '150vh' }}>
+      <div style={{ width: '100%', minHeight: '120vh' }}>
           <SeoComponent
               title={urlQuery && ('🔎 ' + urlQuery)}
               description={
@@ -79,7 +79,7 @@ function App({ movies, searchQ, route }) {
               }
           />
           <div className={'page-border-top'} />
-          <Spacer top={'7vh'} />
+          <Spacer top={'3vh'} />
 
           {isMobile ? (
               <div
@@ -106,7 +106,6 @@ function App({ movies, searchQ, route }) {
 
                   <Share
                       url={window.location.href}
-                      title={'Share your Findings'}
                   />
               </div>
           )}
