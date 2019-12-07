@@ -12,10 +12,12 @@ function SearchComponent({setSearch}) {
   return (
       <Search
           placeholder="Title, director, cast, year..."
-          style={{ width: isMobile ? '100%' : '20vw', paddingRight: '10px' }}
+      style={{ width: isMobile ? '100%' : '20vw', paddingRight: '10px' }}
+  
           onSearch={value => {
               setSearch(value)
-              history.push('/collection/' + value)
+            history.push('/collection/' + value)
+            window.scroll(0,0)
           }}
       />
   )

@@ -2,7 +2,7 @@ import React from "react";
 import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 import Img from "react-image";
-import { idToPoster } from "../helpers";
+import { idToPoster, isMobile } from "../helpers";
 import AddToFavorites from "./AddToFavorites";
 import { Icon, Rate } from "antd";
 
@@ -76,7 +76,7 @@ export default function SliderContent({ data, isDetail }) {
            
           </div>
           {
-            !isDetail &&
+            (!isDetail && !isMobile) &&
             <div className={'poster-title'}>
             <p style={{  fontSize: '13px', color: 'rgba(255,255,255,0.6)', fontWeight: '300', fontFamily:'inherit' }}>
                 <strong>{title.slice(0, 35)}{title.length>35 && '...'}</strong> <br/><Icon type="clock-circle" theme="filled" /> {runtime}
