@@ -11,7 +11,6 @@ import FlexSearch from 'flexsearch/dist/flexsearch.min'
 
 var index = new FlexSearch({
   profile:"fast",
-  depth: 5,
   async: true,
   cache: true
 });
