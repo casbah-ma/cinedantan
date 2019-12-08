@@ -220,6 +220,16 @@ p{
   font-family: var(--font-sans);
 }
 
+.background-parallex{
+  height:50vh; 
+  background-size:cover; 
+  background-repeat:no-repeat; 
+  background-attachment:fixed; 
+  background-position:center
+}
+
+
+
 .read-more-button{
   font-weight: 900;
   

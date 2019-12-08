@@ -35,9 +35,9 @@ function FavoritesContainer({ movies, route }) {
     }   
   }, [movies, urlQuery])
   
-  const { title, year, runtime, director, writers, stars, genre, rating, wiki, story, related, imdb } = detail || {}
-  const interestedBy = imdbToMovie(related, movies)
-  const interestedByTitles = interestedBy ? interestedBy.map(t => t.title) : []
+    const { title, year, runtime, director, writers, stars, genre, rating, wiki, story, related, imdb, identifier } = detail || {}
+    const interestedBy = imdbToMovie(related, movies)
+    const interestedByTitles = interestedBy ? interestedBy.map(t => t.title) : []
   
   //, related, aoMeta, status,
   
@@ -47,11 +47,11 @@ function FavoritesContainer({ movies, route }) {
           <SeoComponent
               title={'🎥 🍿 ' + title + ' by ' + director}
               description={story ? story.slice(0, 100) + '...' : ''}
-              image={idToPoster(detail.identifier)}
+              image={idToPoster(identifier)}
           />
           <div className={'page-border-top'} style={{ zIndex: 3 }} />
 
-          {detail && detail.identifier ? (
+          {identifier ? (
               <div
                   style={{
                       backgroundImage: `url(${idToPoster(detail.identifier)})`,
@@ -71,13 +71,17 @@ function FavoritesContainer({ movies, route }) {
                   overflowY: 'scroll',
               }}
           >
+              {(isMobile && identifier) && <div className={'background-parallex'} style={{backgroundImage:`url(${idToPoster(identifier)})`}}></div>}
+              
               <div style={{ margin: '7vw' }}>
                   {!detail && <AnimFilm />}
+                  
 
                   {detail && detail.identifier ? (
                       <Row gutter={16}>
+                          
                           {isMobile ? (
-                              <Spacer top={'7vh'} />
+                              <Spacer top={'3vh'} />
                           ) : (
                               <Col span={8}>
                                   <div>
