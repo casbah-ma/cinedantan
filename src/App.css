@@ -222,9 +222,10 @@ p{
 
 .background-parallex{
   height:50vh; 
-  background-size:cover; 
+  width: auto;
+  background-size:contain; 
   background-repeat:no-repeat; 
-  background-attachment:fixed; 
+  background-attachment:scroll; 
   background-position:center
 }
 

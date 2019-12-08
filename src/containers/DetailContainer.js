@@ -20,7 +20,7 @@ function FavoritesContainer({ movies, route }) {
     if (!text) return
 
     if (Array.isArray(text)) {
-      return text.map((a, i) => <Link key={a+i} to={'/collection/' + a}><Tag color="#108ee9" style={{fontWeight:500, fontSize:'15px', lineHeight:'20px', margin:'7px', padding:'5px',  cursor:'pointer'}}>{a}</Tag></Link>)
+      return text.map((a, i) => <Link key={a+i} to={'/collection/' + a}><Tag  style={{fontWeight:900, fontSize:'13px', lineHeight:'13px', margin:'5px', padding:'5px',  cursor:'pointer'}}>{a}</Tag></Link>)
     }
 
     return <span className={'detail-tags'}><Link to={'/collection/'+text}><Icon type="search" /> {text}</Link> </span>
@@ -176,29 +176,29 @@ function FavoritesContainer({ movies, route }) {
                                   />
                               </div>
                               <p>
-                                  <strong>Starring</strong>:{' '}
+                                  <span style={{fontWeight:900}}>Starring</span>:{' '}
                                   {stars ? linkToSearch(stars) : null}
                               </p>
                               <p>
-                                  <strong>Genres</strong>:{' '}
+                                  <span style={{fontWeight:900}}>Genres</span>:{' '}
                                   {genre ? linkToSearch(genre) : ''}
                               </p>
                               <p>
-                                  <strong>Writers</strong>:{' '}
+                                  <span style={{fontWeight:900}}>Writers</span>:{' '}
                                   {writers ? linkToSearch(writers) : ''}
                               </p>
                               <p>
-                                  <strong>Director</strong>:{' '}
+                                  <span style={{fontWeight:900}}>Director</span>:{' '}
                                   {director ? linkToSearch(director) : ''}
                               </p>
                               <p>
-                                  <strong>Related</strong>:{' '}
+                                  <span style={{fontWeight:900}}>Related</span>:{' '}
                                   {interestedByTitles
                                       ? linkToSearch(interestedByTitles)
                                       : ''}
                               </p>
                               <p>
-                                  <span>Sources</span>:{' '}
+                                  <span style={{fontWeight:900}}>Sources</span>:{' '}
                                   <span
                                       style={{
                                           paddingRight: '5px',
