@@ -20,7 +20,24 @@ function FavoritesContainer({ movies, route }) {
     if (!text) return
 
     if (Array.isArray(text)) {
-      return text.map((a, i) => <Link key={a+i} to={'/collection/' + a}><Tag  style={{fontWeight:900, fontSize:'13px', lineHeight:'13px', margin:'5px', padding:'5px',  cursor:'pointer'}}>{a}</Tag></Link>)
+        return text.map((a, i) => <Link
+            key={a + i}
+            to={'/collection/' + a}>
+            <Tag
+                style={{
+                    fontWeight: 900,
+                    fontSize: '13px',
+                    lineHeight: '13px',
+                    margin: '5px', padding: '5px',
+                    cursor: 'pointer'
+                }}>
+                <Icon
+                    type="search"
+                    style={{
+                        color: 'rgba(0,0,0,.2)'
+                    }} /> {a}
+            </Tag>
+        </Link>)
     }
 
     return <span className={'detail-tags'}><Link to={'/collection/'+text}><Icon type="search" /> {text}</Link> </span>
@@ -38,9 +55,6 @@ function FavoritesContainer({ movies, route }) {
     const { title, year, runtime, director, writers, stars, genre, rating, wiki, story, related, imdb, identifier } = detail || {}
     const interestedBy = imdbToMovie(related, movies)
     const interestedByTitles = interestedBy ? interestedBy.map(t => t.title) : []
-  
-  //, related, aoMeta, status,
-  
 
   return (
       <div style={{ width: '100%' }}>
@@ -175,28 +189,44 @@ function FavoritesContainer({ movies, route }) {
                                       text={story}
                                   />
                               </div>
-                              <p>
-                                  <span style={{fontWeight:900}}>Starring</span>:{' '}
-                                  {stars ? linkToSearch(stars) : null}
-                              </p>
-                              <p>
-                                  <span style={{fontWeight:900}}>Genres</span>:{' '}
-                                  {genre ? linkToSearch(genre) : ''}
-                              </p>
-                              <p>
-                                  <span style={{fontWeight:900}}>Writers</span>:{' '}
-                                  {writers ? linkToSearch(writers) : ''}
-                              </p>
-                              <p>
-                                  <span style={{fontWeight:900}}>Director</span>:{' '}
-                                  {director ? linkToSearch(director) : ''}
-                              </p>
-                              <p>
-                                  <span style={{fontWeight:900}}>Related</span>:{' '}
-                                  {interestedByTitles
-                                      ? linkToSearch(interestedByTitles)
-                                      : ''}
-                              </p>
+                              {
+                                stars &&  <p>
+                                <span style={{fontWeight:900}}>Starring</span>:{' '}
+                                { linkToSearch(stars) }
+                            </p>
+                              }
+                             
+                              {
+                                genre && genre[0] &&   <p>
+                                <span style={{fontWeight:900}}>Genres</span>:{' '}
+                                {linkToSearch(genre)}
+                                </p>
+                                  
+                              }
+                              
+                              {
+                                writers && <p>
+                                <span style={{fontWeight:900}}>Writers</span>:{' '}
+                                {  linkToSearch(writers) }
+                            </p>
+                              }
+                              
+                              {
+                                director &&  <p>
+                                <span style={{fontWeight:900}}>Director</span>:{' '}
+                                { linkToSearch(director)}
+                            </p> 
+                                  
+                              }
+
+                              { interestedByTitles && 
+                                <p>
+                                <span style={{fontWeight:900}}>Related</span>:{' '}
+                                {linkToSearch(interestedByTitles)}
+                            </p>
+                              }
+                             
+                              
                               <p>
                                   <span style={{fontWeight:900}}>Sources</span>:{' '}
                                   <span

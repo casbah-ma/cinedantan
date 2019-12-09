@@ -1,6 +1,7 @@
 import {POSTERS_CDN, POSTERS_CDN_MOBILE, POSTERS_CDN_XS} from './constants'
 
 export const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+export const isIpad = /iPad/i.test(navigator.userAgent);
 export const isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 export function shuffle(arra1) {
     var ctr = arra1.length, temp, index;
