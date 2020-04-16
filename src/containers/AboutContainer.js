@@ -9,23 +9,8 @@ export default function MenuContainer () {
       />
         <h1 style={{color:'white'}}>About</h1>
         <div>
-          <p>
-          Once upon a time, in Canada, there was a bored software developer.
-          </p>
-          <p>
-          Every day, after very long hours spent coding different projects, sometimes for his dreams software, 
-            most of the times his nightmares (we all need money, right ?!), he would watched a movie and try to escape his mind.
-  
-          </p>
-          <p>
-          Finally he got bored by the so-called "Original" productions from big streaming names and decided to look elsewhere, precisely, in the Public Domain Movies.
-
-          </p>
-          <p>
-          He tried Archive.org and they had a priceless collection of what he wanted to watch, but their UI was not as bling bling as he was used to, so he decided to take a few days and build CineDantan.com
-
-          </p>
-        
+    
+        <p>Cinedantan is a friendly and searchable library of public domain movies.</p>
           <p>
           Please consider supporting <a href="https://archive.org" target="_Blank" rel="no-follow nofollow noopener noreferrer">Archive.org</a> as they host all the videos.
           </p>
