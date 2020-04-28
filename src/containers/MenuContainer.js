@@ -67,7 +67,7 @@ function MenuContainer ({favorites, isPlaying}) {
             {!isPlaying ? (
                 <Menu.Item key="code">
                     <a
-                        href="https://github.com/cinedantan"
+                        href="https://github.com/yelabbassi/cinedantan"
                         target="_Blank"
                         rel="noopener noreferrer"
                     >
