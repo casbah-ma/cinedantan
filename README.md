@@ -12,8 +12,7 @@ Cinedantan is a friendly and searchable library of public domain movies.
 
 It's a small React.js Progressive Web App. 
 
-The movies dataset is a simple JSON file streamed into the redux store using 
-the excellent [Oboe.js](http://oboejs.com/). It was created by combining multiple sources:
+The movies dataset is a simple JSON file. It was created by combining multiple sources:
 Archive.org, WikiData, Wikipedia, and IMDB.
 
 The dataset is located here: 
