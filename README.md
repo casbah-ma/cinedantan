@@ -6,25 +6,20 @@
 
 # Hello there!
 
-Cinedantan is a friendly and searchable library of public domain movies. 
+Cinedantan is a public domain movies streaming webapp.
 
 ![](https://cdn.cinedantan.com/github/you-might-like.png)
 
-It's a small React.js Progressive Web App. 
+Whether you're a fan of vintage black and white flicks, classic musicals, or timeless dramas. it's easy and super fast to browse our extensive collection of +2100 movies.
 
-The movies dataset is a simple JSON file. It was created by combining multiple sources:
+The movies dataset was created by combining multiple sources:
 Archive.org, WikiData, Wikipedia, and IMDB.
 
-The dataset is located here: 
-
-    /public/database/movies.json
-
 ## Some Features
-- Offline search engine (thanks to [flexsearch](https://github.com/nextapps-de/flexsearch) )
-- Create and share your lists (This is done with no remote database or server)
+- Offline search engine
+- Create and share your lists
 - Continue Watching
 - Personalized recommendations
-- ChromeCast support
+- Casting support
 - ...
 
-~~This App was built in less than 48h. I will do some refactoring and add tests very soon.~~

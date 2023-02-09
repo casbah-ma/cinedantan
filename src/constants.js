@@ -1,4 +1,4 @@
-const CDN_BASE = "https://cdn.cinedantan.com/"
+const CDN_BASE = "https://boomerangdb.nyc3.cdn.digitaloceanspaces.com/"
 export const DOMAIN_BASE = "https://cinedantan.com/"
 export const POSTERS_CDN = CDN_BASE + "posters/webp/"  //webp
 export const POSTERS_CDN_HEIGHT_RES = CDN_BASE+"posters/"  //webp

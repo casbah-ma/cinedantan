@@ -1,35 +1,27 @@
 import React from 'react'
-import {
-    Link
-} from "react-router-dom";
+import { Link } from 'react-router-dom'
 import Search from '../components/Search'
-import { Menu, Icon } from 'antd';
+import { Menu, Icon } from 'antd'
 import { isMobile } from '../helpers'
-import { connect } from 'react-redux';
-import { Badge } from 'antd';
+import { connect } from 'react-redux'
+import { Badge } from 'antd'
 
-
-
-function MenuContainer ({favorites, isPlaying}) {
+function MenuContainer({ favorites, isPlaying }) {
     return (
         <Menu mode="horizontal" theme="dark" className={'menu-desktop'}>
             <Menu.Item key="catalog">
                 {!isPlaying ? (
                     <Link to="/">
                         <Icon type="unordered-list" />
-                        <Badge
-                            count={'alpha'}
-                            style={{ backgroundColor: '#fff', color: 'black' }}
+
+                        <span
+                            style={{
+                                fontSize: '17px',
+                                marginRight: '25px',
+                            }}
                         >
-                            <span
-                                style={{
-                                    fontSize: '17px',
-                                    marginRight: '25px',
-                                }}
-                            >
-                                Catalog
-                            </span>
-                        </Badge>
+                            Catalog
+                        </span>
                     </Link>
                 ) : (
                     <Link to={'/details/' + btoa(isPlaying.imdb)}>
@@ -61,8 +53,6 @@ function MenuContainer ({favorites, isPlaying}) {
                     </Link>
                 </Menu.Item>
             ) : null}
-
-          
 
             {!isPlaying ? (
                 <Menu.Item key="code">
@@ -106,13 +96,13 @@ function MenuContainer ({favorites, isPlaying}) {
         </Menu>
     )
 }
-  
-const mapStateToProps = state => ({
-  ...state
-})
- 
-const mapDispatchToProps = dispatch => ({
-  //addFile: file => dispatch(addFile(file))
- })
 
- export default connect(mapStateToProps, mapDispatchToProps)(MenuContainer);
+const mapStateToProps = (state) => ({
+    ...state,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    //addFile: file => dispatch(addFile(file))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MenuContainer)
